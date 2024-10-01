@@ -1,0 +1,90 @@
+/* ベース設定 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f8ff; /* 水色基調の背景 */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+}
+
+/* ヘッダー */
+header {
+    background-color: #3bb9ff;
+    padding: 20px 0;
+}
+
+h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* メインセクション */
+main {
+    padding: 50px 0;
+}
+
+/* サーバーセクション */
+.server-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* 各行のスタイル */
+.server-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* サーバーカード */
+.server-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 250px;
+    text-align: center;
+}
+
+.server-card:hover {
+    transform: translateY(-10px); /* ホバー時に浮く */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* ボックスシャドウで浮く効果 */
+}
+
+.server-card a {
+    text-decoration: none; /* リンクの下線を削除 */
+    color: inherit; /* テキストの色を継承 */
+}
+
+.server-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+/* ボタンのスタイル */
+.server-button {
+    display: inline-block;
+    width: 100%;
+    padding: 15px 0;
+    background-color: #3bb9ff;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 0 0 10px 10px;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ホバー時のスタイル */
+.server-card:hover img {
+    opacity: 0.8; /* 画像のホバー時に少し暗くする効果 */
+}
+
+/* 2段目（イベント鯖）の中央配置 */
+.event-server {
+    margin: 0 auto; /* 2段目で真ん中に配置 */
+}

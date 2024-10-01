@@ -1,0 +1,214 @@
+/* 全体のスタイル */
+html, body {
+    height: 100%; /* 高さを100%に設定 */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ヘッダーのスタイル */
+header {
+    background-color: #0099ff; /* ヘッダーの背景色 */
+    padding: 15px 20px;
+    color: #fff; /* ヘッダーの文字色 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* ヘッダーの影 */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header-content a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-content a:hover {
+    text-decoration: underline;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* コンテナのスタイル */
+.container {
+    flex: 1; /* コンテナが残りの空間を占めるようにする */
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff; /* コンテナの背景色 */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 国一覧セクションのスタイル */
+h2 {
+    color: #333; /* 見出しの文字色 */
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* 国のアイテムのスタイル */
+.country-item {
+    margin-bottom: 15px;
+}
+
+.country-button {
+    background-color: #0099ff; /* ボタンの背景色 */
+    color: #fff; /* ボタンの文字色 */
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    display: block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* ボタンの影 */
+    transition: background-color 0.3s, box-shadow 0.3s; /* トランジション */
+}
+
+.country-button:hover {
+    background-color: #007acc; /* ボタンのホバー時の色 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* ホバー時の影 */
+}
+
+.country-details {
+    margin-top: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff; /* 情報表示の背景色 */
+    display: none; /* デフォルトでは非表示 */
+}
+
+.country-details.active {
+    display: block; /* 詳細がアクティブなときに表示 */
+}
+
+/* 国民リストのスタイル */
+.citizen-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.citizen-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.citizen-list li span {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.citizen-list button {
+    background-color: #ff4d4d; /* 削除ボタンの背景色 */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.citizen-list button:hover {
+    background-color: #e60000; /* 削除ボタンのホバー時の色 */
+}
+
+/* フォームのスタイル */
+.form-group {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #0099ff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #007acc;
+}
+
+/* 国民追加フォームのスタイル */
+.citizen-form {
+    margin-top: 20px;
+}
+
+.citizen-form input[type="text"] {
+    margin-bottom: 10px;
+}
+
+/* フッターのスタイル */
+footer {
+    background-color: #f1f1f1; /* フッターの背景色 */
+    padding: 20px 0; /* 上下のパディング */
+    position: fixed; /* フッターを画面下部に固定 */
+    left: 0;
+    bottom: 0;
+    width: 100%; /* フッターの幅を100%にする */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* 軽い影を付ける */
+    display: flex; /* フレックスボックスを使って中央揃え */
+    justify-content: center; /* 横方向に中央揃え */
+    align-items: center; /* 縦方向に中央揃え */
+    text-align: center; /* テキストを中央揃え */
+}
+
+.footer-content {
+    max-width: 1200px; /* 最大幅を指定（必要に応じて調整） */
+    width: 100%; /* フッター内容の幅を100%にする */
+}
+
+.footer-content p {
+    margin: 0; /* デフォルトのマージンをリセット */
+    color: #333; /* テキストの色 */
+}

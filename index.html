@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>公式サイト - AyuServer</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-BTy+rj/uUJfN8Hs0VxNqDx4yezv0iOWXNRxMzMz+oVJBCIcYIi9+hu/CYCYRSn7MNCxiE3eq22JXePJdCoyRDg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+/* CSSスタイル */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* 背景を黒に変更 */
+    color: #fff; /* 文字色を白に変更 */
+}
+
+.header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    position: fixed;
+    top: 10px; /* 上からの距離を調整 */
+    right: 20px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* 横並びにする */
+}
+
+.navbar li {
+    margin-right: 20px; /* リンクの間隔を調整 */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff; /* ナビゲーションのリンク色を白に変更 */
+    font-weight: bold; /* ナビゲーションのリンクを太字にする */
+}
+
+.navbar a:hover {
+    border-bottom: 2px solid #fff; /* 選択したリンクに下線を追加 */
+}
+
+.section {
+    margin-top: 80px; /* コンテンツとの間隔を調整 */
+    margin-bottom: 50px;
+}
+
+.section h2 {
+    border-bottom: 2px solid #fff; /* セクション見出しの下線を白に変更 */
+    padding-bottom: 10px;
+}
+
+.section p {
+    line-height: 1.6;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 3px; /* アイコンとテキストの間隔を調整 */
+}
+
+.contact-info i {
+    margin-right: 3px; /* アイコンとテキストの間隔を調整 */
+}
+
+.contact-info a:hover {
+    border-bottom: 2px solid #fff; /* 選択したリンクに下線を追加 */
+}
+
+.footer {
+    text-align: left; /* コピーライト文を左寄せに変更 */
+    margin-top: 50px; /* ページの最下部からの距離を設定 */
+}
+
+/* 画像スタイル */
+.server-image {
+    width: 100%; /* 画像を横幅いっぱいに広げる */
+    margin-bottom: 10px; /* 画像間の余白を設定 */
+}
+
+.discord-invite-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #7289DA;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.discord-invite-btn:hover {
+    background-color: #5865F2;
+}
+
+.discord-widget-container {
+    margin-top: 30px;
+}
+
+/* 新たに追加 */
+.navbar a.discord-link {
+    text-decoration: none; /* Discordリンクの下線を削除 */
+}
+
+/* 新たに追加 */
+.contact-info a:not(:last-child) {
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #fff;
+}
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* 横並びにする */
+    align-items: center; /* 垂直方向の中央揃え */
+}
+
+.navbar li {
+    margin-right: 20px; /* リンクの間隔を調整 */
+    height: 100%; /* 目次の高さを親要素に合わせる */
+}
+.section hr {
+    border: none;
+    border-top: 1px solid #fff; /* 白色の1pxの水平線 */
+    margin: 20px 0; /* 上下のマージンを調整 */
+}
+
+/* リンクの色を変更 */
+a.sample2 {
+  color:#00bbff;
+}
+
+/* マウスを載せたときの色を変更 */
+a.sample2:hover {
+  color:#ffffff;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1>AyuServer</h1>
+    <p></p>
+</div>
+
+<div class="navbar">
+    <ul>
+        <li><a href="#ip">参加方法</a></li>
+        <li><a href="#rules">ルール</a></li>
+        <li><a href="#feature">特徴</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+        <li><a href="#images">画像</a></li>
+        <li><a href="#discord" class="discord-link">Discord</a></li>
+    </ul>
+</div>
+
+<div class="container">
+
+    <div id="ip" class="section">
+        <h2>参加方法</h2>
+        <p>Java版: <span id="play-link" style="font-size: smaller; cursor: pointer;">mc.ayuserver.net</span></p>
+        <p>BE版: <span id="be-link" style="font-size: smaller; cursor: pointer;">be.ayuserver.net</span></p>
+        <p>※IPはタップ、クリックするとコピーできます。</p>
+    </div>
+
+    <div id="rules" class="section">
+        <h2>ルール</h2>
+        <p>以下、マイクラサーバーのルールです。お読みください。</p>
+        <p>1: チートや、XRay、バグなどを使った不正行為が確認されたら処罰されますので、<p>
+            <p> 必ず使用しないようにお願いします。
+        </p>
+        <p>2: チャットやDiscordで、下ネタや、脅迫、暴言などに当たる発言があったら、<p>
+            処罰される可能性がございますので、人が傷つく発言は言わないようにお願いします。
+        </p>
+        <p>3: その他、最低限のルールはご自身で判断して、守るようにしましょう。<p></p>
+            ※処罰はbBan、Kick、Muteとなります。運営が判断して、処罰をするという形になります。<p></p>
+            注意1: discordサーバーでのルールは別なので、ご注意ください。<br>
+            注意2: 2、3、以外のことでも処罰される可能性がございますので、ご注意ください。<p>
+        
+        </p>
+    </div>
+
+    <div id="feature" class="section">
+        <h2>特徴</h2>
+        <p>主なこの鯖での特徴などをご紹介いたします。<p></p>
+        1: 定期的なイベント<p></p>
+        このサーバーでは定期的なイベントがあり、様々な企画が行われます！<p></p>
+        基本的にYoutubeで配信しますので、是非通知ONにしてみてください！<p></p>
+        discordサーバーからイベント配信の通知を受け取ることもできます、<p></p>
+        下のDiscordサーバー参加ボタンを押すと参加ができます。<p></p>
+        <a href="https://dc.ayuserver.net" class="discord-invite-btn">Discordサーバーへ参加する</a><p></p>
+        2: Youtube以外でのサーバーの宣伝<p></p>
+        このサーバーでは、Youtube以外ではなく、DisBoardや、<a href= "https://mineportal.jp/servers/cm0ataxhj00005gwq9o7r7b3i" target="_blank" class="sample2">MinePortal</a>、<a href= "https://monocraft.net/servers/KgCvA930jN4Fs5XtElx9" target="_blank" class="sample2">ものくらふと！</a>、などを使ってサーバーの宣伝を行っています、Youtubeの人たちだけ<p></p>
+ではなく、ほかの人とも関わることができます！
+
+    </div>
+
+    <div id="faq" class="section">
+        <h2>よくある質問</h2>
+        <p>よくあるような質問などを書いています。質問する前にご確認ください。</p>
+        <p>1: Q.マイクラサーバーはどのように入りますか？<p></p>
+       　A.Java版は、起動したらマルチプレイを押して、サーバーを追加を押して、</p>
+       　サーバー名は自由に(分かりやすい名前)、サーバーアドレスは <span id="play-link" style="font-size: smaller; cursor: pointer;">mc.ayuserver.com</span></p>
+　にして、完了を押して、追加されたサーバーをダブルクリックもしくはサーバーに接続を押しましょう。<p></p>
+
+        <p>2: Q.discordサーバーはどうやって入りますか?<p></p>
+        　A.下のボタンから参加できます。<p></p>
+        <a href="https://dc.ayuserver.net" class="discord-invite-btn">Discordサーバーへ参加する</a><p></p>
+    </div>
+    <!-- 画像欄 -->
+    <div id="images" class="section">
+        <h2>画像<p>
+    <hr> <!-- 水平線の挿入 -->
+        サーバー内にある画像がこちらです<p></p>
+        <!-- ここに画像を追加 -->
+        <img src="https://x.gd/7HQLY" alt="サーバー内の画像1" class="server-image"><br>
+        <img src="server_image2.jpg" alt="サーバー内の画像2" class="server-image"><br>
+        <img src="server_image3.jpg" alt="サーバー内の画像3" class="server-image">
+    </div>
+    <!-- Discord招待リンク -->
+    <div id="discord" class="section">
+        <h2>Discordサーバーへの参加</h2>
+        <p>当サーバーのコミュニティに参加しましょう！</p>
+        <a href="https://dc.ayuserver.net" class="discord-invite-btn">Discordサーバーへ参加する</a>
+    </div>
+
+    <!-- Discord Server Widget -->
+    <div class="discord-widget-container">
+        <iframe src="https://discord.com/widget?id=1228279875610345502&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    </div>
+
+    <!-- 連絡先情報 -->
+    <div class="contact-info">
+        <a href="mailto:support@ayuserver.com"><i class="far fa-envelope"></i> メール: support@ayuserver.net</a>
+        <a href="https://x.com/ayumcserver"><i class="fab fa-twitter"></i> X(旧Twitter): @ayumcserver</a>
+        <a href="https://dc.ayuserver.net"><i class="fab fa-discord"></i> Discord: AyuServer-公式</a>
+    </div>
+
+    <!-- コピーライト -->
+    <div class="footer">
+        <p>© 2024 AyuServer</p>
+        <p>当サイトの内容を無断で複製や、利用することは禁じられています。</p>
+    </div>
+
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // テキストをクリップボードにコピーする関数
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text)
+            .then(() => {
+                alert('コピーが成功しました: ' + text);
+            })
+            .catch(err => {
+                console.error('コピーに失敗しました: ', err);
+            });
+    }
+
+    // テキストをクリックしたらコピーするイベントリスナーを追加
+    document.getElementById('play-link').addEventListener('click', function() {
+        copyToClipboard('mc.ayuserver.net');
+    });
+
+    document.getElementById('be-link').addEventListener('click', function() {
+        copyToClipboard('be.ayuserver.net');
+    });
+
+    // 目次リンクをクリックしたら該当するセクションまでスクロール
+    document.querySelectorAll('.navbar a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // DiscordリンクをクリックしたらDiscordセクションにスクロール
+    document.querySelector('.discord-link').addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+# .htaccess
+# PHPファイルへのアクセスは許可
+<FilesMatch "\.(php)$">
+    Require all granted
+</FilesMatch>
+
+# JSONファイルやその他のファイルへのアクセスを禁止
+<FilesMatch "\.(json|txt|md|log|conf)$">
+    Require all denied
+</FilesMatch>
